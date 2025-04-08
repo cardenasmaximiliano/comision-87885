@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Underdog&display=swap');
+
+/*
+1- llamar a todas las fuentes tipograficas
+2- escribir el reset
+3- llamar a todos los colores que vaya a usar y los guardo en un comentario.
+4- estilos generales
+5- escribir el codigo por bloques de manera ordenada arrancando desde el header
+
+
+*/
+
+/*
+paleta de colores
+
+#102E50
+#F5C45E
+#E78B48
+#BE3D2A
+
+
+.underdog-regular {
+  font-family: "Underdog", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+*/
+
+.navbar{
+    list-style: none;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: red;
+    font-family: "Underdog", system-ui;
+}
+
+header{
+    display: flex;
+}
+
+h1{
+    background-color: black;
+    color: rgb(227, 239, 8);
+    text-align: center;
+    font-family: "Underdog", system-ui;
+}
+p{
+    color: red;
+    font-family: "Roboto", sans-serif;
+}
+/*
+CONCEPTO DE ESPECIFICIDAD
+*/
+
+section p{
+    color: rgb(246, 238, 16);
+}
+
+section div p{
+    color: orange;
+}
+
+/*
+como son finitas las etiquetas html me permite trabajar con unos atributos
+que son propios de css => 
+
+class => clases (son las que mas vamos a usar, me permiten a mi reutilizarlas)
+id => identificadores unicos (solamente se usa una vez por sitio, se reserva para javascript)
+
+nomenclaturas en codigo => 
+
+NOTICIAS DE HOY INDEX
+
+camelCase => noticiasDeHoyIndex 
+kebab =>  noticias-de-hoy-index
+snake_case => noticias_de_hoy_index (lo van a ver mucho en codigo js)
+BEM => BLOQUE_ELEMENTO-MODIFICAR 
+
+*/
+
+.infoNoticiasIndex{
+    background-color: #102E50;
+    text-decoration: underline;
+}
+
+
+.infoNoticiasIndex p{
+    color: #F5C45E;
+    text-align: center;
+}
+
+.tiendaH1{
+    text-align: right;
+    color: blue;
+}
+.infoNoticiasIndexSNSubrayado{
+    text-decoration: none;
+}
