@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+en css ocurre otra clasificacion
+
+etiquetas pueden ser de linea o de bloque.
+
+en linea ==> inline quiere decir que el elemento ocupa solamente
+el espacio del contenido
+
+en bloque => block quiere decir que ocupa el 100% del ancho del contenedor
+
+
+
+
+*/
+
+img{
+    width: 20%;
+}
+
+.section-grid{
+     display: grid; 
+     width: 100%;
+     height: 100vh;
+    background-color: rgb(248, 253, 252);
+    /*grids nos deja escribir hasta 12 columnas
+    en cambio las filas todas que querramos. 
+
+    ACA NO EXISTE UNA DIRECCION PRINCIPAL LAS 2 SON IMPORTANTES
+    */
+    grid-template-columns: repeat(2,400px); 
+    grid-template-rows: auto repeat(3,auto) ;
+    /*
+    los movimientos
+
+    si quiero mover el contenedor de izquierda a derecha => justify-content
+    si quiero mover el contenedor arriba y abajo => align-content
+    */
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 
+    "h1 button"
+    "noticia1 noticia2"
+    "noticia1 noticia3"
+    "noticia1 noticia4"
+    ;
+    /*
+    si quiero mover todos los items en conjunto de izquierda a derecha => justify-items
+    si quiero mover todos los items en conjunto de arriba a abajo => align-items
+    
+    */
+    justify-items: center ;
+    align-items: center;
+
+    gap: 30px; /*van a afectar tanto a las filas como a las columnas**/
+    row-gap: .625rem;
+}
+
+.section-grid h1{
+    grid-area: h1;
+    justify-self: start;
+}
+.section-grid button{
+    grid-area: button;
+    /*
+    si quiero mover los elementos de manera independiente tambien lo puedo hacer
+    justify-self
+    align-self
+    */
+    justify-self: end;
+    /* align-self: self-start; */
+}
+
+.section-grid .noticiaIzquierda{
+    grid-area: noticia1;
+}
+
+.section-grid .noticiaDerechaUno{
+    grid-area: noticia2;
+}
+.section-grid .noticiaDerechaDos{
+    grid-area: noticia3;
+}
+.section-grid .noticiaDerechaTres{
+    grid-area: noticia4;
+}
+
+.noticiasSection1{
+    display: flex;
+}
+
+
+.section-principal{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,6.25rem);
+}
+
+.section-principal h1{
+    grid-column-start: 3 ;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+    order:1 ;
+}
+
+.section-principal p{
+    grid-column:3 / 5 ;
+    grid-row: 3/5;
+    order: 5;
+    background-color: rgba(128, 128, 128, 0.35);
+}
+
+.section-principal button{
+    grid-column: 5/6;
+    grid-row: 3 /5;
+    order: 3;
+}
+
+.section-principal .img1{
+    grid-column:  6/8;
+    grid-row: 1/3;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    order: 4;
+}
+
+.section-principal .img2{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    width: 100%;
+    order:2;
+    opacity:50%;
+}
+
+.section-principal .img3{
+    grid-column: 6/8;
+    grid-row: 1/8;
+    width: 100%;
+    align-self: end;
+    order: 6;
+    opacity: 50%;
+   
+}

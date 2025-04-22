@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: linear-gradient(lightgray, white);
+    display: flex;
+    /*
+    flexbox posee 2 propiedades importantes
+
+    flex-direction: como queremos que se comporten los hijos en cuanto a la direccion
+    se va a poner todo horizontal(row)
+    flex-wrap: 
+    */
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    gap: 1.25rem;
+    margin: 1.25rem 0px;
+}
+.navbar li a{
+    text-decoration: none;
+    color: black;
+}
+
+.section-principal{
+    background-image: url("../assets/img/background-principal.avif");
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100% ;
+    height:100vh; /*viewport Height => es que se vea en cualquier pantalla
+    el 100%*/
+    display: flex;
+    flex-direction: row;
+    /*justify-content*/
+    justify-content: flex-end; /*flex-start: izquierda, center = al centro , flex-end*/
+    align-items: center;
+}
+
+.section-principal h1{
+    font-size: 1.875rem;
+    padding: 20px 0px;
+
+}
+.section-principal img{
+    width: 6.25rem;
+    margin-left: 1.25rem;
+}
+.section-principal a button{
+    /*
+    cualquier elemento puede expandirse en su tamaño
+    internamente
+    podemos un limite con bordes
+    podemos generar espacio entre los otros elementos
+    */
+    /* padding: 1.25rem;/*hace que crezca el elemento internamente
+    padding-top: 5px ; /*arriba
+    padding-right:10px ; /*derecha*
+    padding-bottom: 5px ; /*abajo
+    padding-left: 10px ;izquierda */
+    /* padding: 5px .625rem .4375rem .625rem; */
+    padding: 5px 10px; 
+    border: 4px dotted rgba(255, 68, 0, 0.651) ;
+    margin-top: 1.25rem;
+
+    /* border-color: ; color
+    border-style: ; estilo
+
+    border-width: ; grosor*/
+    
+    
+}
+
+/*
+flexbox
+
+concepto padre e hijo
+solamente afecta a los hijos directos
+
+flexbox se considera unidireccional 
+
+izquierda a derecha => eje horizontal
+arriba o abajo => eje vertical
+
+por defecto flex tiene como eje principal al horizontal
+*/
+
+.productos{
+    display: flex;
+    gap: 10px;
+    /*  flex-direction: row;
+   flex-wrap: wrap; */
+}
+.productos-article{
+    width: 300px;
+    font-size: 1.5625rem ;
+    height: 25rem;
+    background-color: lightcyan;
+    
+}

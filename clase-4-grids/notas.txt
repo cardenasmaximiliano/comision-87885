@@ -1,0 +1,24 @@
+flexbox y grids son complementarios
+
+grids se dice que es bidireccional.
+
+display: flex => horizontal y se ponia en nowrap 
+
+/*
+flexbox tiene 2 propiedades que son importantes
+
+flex-direction => row / column
+flex-wrap => que los elementos fueran flexibles o no. 
+
+para mover los elementos
+
+siempre y cuando 
+
+justify-content / align items 
+
+
+grids => esta compuesto por grillas
+y trabaja sobre un padre que tiene hijos. 
+vamos a tener un contenedor padre, y afecta unicamente a los hijos directos.
+
+*/
