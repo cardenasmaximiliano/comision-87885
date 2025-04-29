@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.31);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed  ;
+    top: 0;
+    /*
+    position fixed
+    sticky
+    static
+    relative
+    absolute
+    */
+}
+.navbar{
+    display: flex;
+    justify-content: right;
+    gap: 1.25rem;
+    list-style: none;
+
+}
+.navbar li a{
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    font-size: 1.5625rem;
+}
+
+.navbar li a:hover{
+    color: red;
+}
+
+.section-principal{
+    background-image: url("https://plus.unsplash.com/premium_photo-1682125177822-63c27a3830ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    width: 100%;
+    height: 100vh;
+    background-position: 75% 75%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    width: 18.75rem;
+    height: 25rem;
+}
+.cards img{
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+    filter:grayscale(1)
+}
+.cards img:hover{
+    filter: drop-shadow(2px 2px 5px blue);
+}
+
+.cards button:hover{
+    background-color: lightcoral;
+}
+.cards button:active{
+    background-color: lightblue;
+}
+
+/*
+active => se activa cuando mantenemos click sobre un elemento
+focus => solamente funciona con inputs, y generar propiedades
+*/
+
+input{
+    /*all llama a todos las propiedades de la etiqueta y con unset las elimina*/
+    all: unset;
+    border-bottom: 1px solid black;
+    margin-bottom: .625rem;
+}
+input:focus{
+    font-style: italic;
+    color: red;
+    border: 1px solid black;
+}
+
+.prueba{
+    width: 18.75rem;
+    height: 400px;
+    background-color: lightblue;
+}
+.prueba {
+    overflow:auto;
+}
+.prueba img{
+    width: 100%;
+   
+}
+/*
+pseudoclases y pseudoelementos
+
+pseudoclase => casi una clase, ya que se activa siempre y cuando un usuario ejerza una accion sobre el elemento.
+pseudoelemento => ingresa dentro de la etiqueta y puede generar acciones que serian imposibles desde codigo normal. 
+
+*/
+
+/*
+hover: es una pseudoclase que se activa caundo el usuario pasa el mouse por encima del elemento.
+
+*/
+
+/*
+nth-child
+first-child
+last-child 
+son pseudoclases que me permiten seleccionar a los hijos dentro de un contenedor.
+*/
+.parrafos p:nth-child(3){
+    background-color: lightcyan;
+}
+.parrafos p:first-child{
+    color: red;
+
+}
+.parrafos p:last-child{
+    text-decoration: underline;
+}
+
+/*pseudoelementos => nos permiten ingresar a las etiquetas*/
+
+/* h1:hover::after{
+    content: " los mejores precios 🎄";
+    color: yellow;
+}
+
+h1:hover::before{
+    content: "veni y conoce "
+} */
+
+h1::first-letter{
+    font-size: 30px;
+    color: blue;
+}
+
+p::first-line{
+    background-color: lightgreen;
+}
+
+p::selection{
+    color: black;
+    background-color: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+para trabajar mediaQ utilizamos una regla llamada @media()
+
+es muy importante saber como vamos a arrancar a maquetar
+
+desktop web design => los mediaQ tienen que ordenarse de manera decreciente
+si hacemos mobileFirst => los mediaQ tienen que ordenarse de manera creciente.
+
+
+*/
+
+
+@media(max-width:1024px){
+
+    header{
+        background-color: lightblue;
+        justify-content: space-around;
+    }
+    .navbar li a{
+        color: black;
+    }
+
+}
+
+@media(max-width:768px){
+    header{
+        flex-direction: column;
+        padding-bottom: .3125rem;
+    }
+
+}
+
+@media(max-width: 320px){
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+}
